@@ -1,11 +1,13 @@
 
 require('./server'); 
+const dotenv = require('dotenv');
+dotenv.config();
 const mongoose = require('mongoose');
 const prompt = require('prompt-sync')();
 const Customer = require('./models/customer'); 
 
 
-mongoose.connect(process.env.MONGODB_URI);
+
 
 const welcomeMessage = () => {
   console.log(('Welcome to the Customer Management System!'));
